@@ -1,0 +1,158 @@
+/* BMW EXECUTIVE STUDIO — CUSTOMER REGISTRATION */
+
+.customer-register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(28, 105, 212, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #050a13, #0c1728);
+  color: #ffffff;
+}
+
+.customer-register-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 38px;
+  background: rgba(12, 22, 38, 0.94);
+  border: 1px solid rgba(77, 166, 255, 0.25);
+  border-radius: 18px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(28, 105, 212, 0.08);
+}
+
+/* BACK TO LOGIN */
+
+.register-back-btn {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin: 0 auto 28px 0;
+  padding: 10px 16px;
+  background: transparent;
+  color: #8cc8ff;
+  border: 1px solid rgba(77, 166, 255, 0.35);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-back-btn:hover {
+  background: rgba(28, 105, 212, 0.12);
+  border-color: #8cc8ff;
+  box-shadow: 0 0 18px rgba(28, 105, 212, 0.25);
+  transform: translateX(-3px);
+}
+
+/* HEADINGS */
+
+.register-eyebrow {
+  color: #8cc8ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.customer-register-card h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(77, 166, 255, 0.25);
+}
+
+.register-description {
+  color: #a5b5cb;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* REGISTRATION FORM */
+
+.customer-register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.customer-register-card label {
+  color: #dbe8fa;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.customer-register-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  background: #0a1220;
+  color: #ffffff;
+  border: 1px solid #344760;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.customer-register-card input:focus {
+  border-color: #4da6ff;
+  box-shadow: 0 0 12px rgba(28, 105, 212, 0.2);
+}
+
+.customer-register-card input::placeholder {
+  color: #7f93ae;
+}
+
+/* CREATE ACCOUNT BUTTON */
+
+.register-submit-btn {
+  margin-top: 24px;
+  padding: 15px;
+  background: linear-gradient(135deg, #1c69d4, #104a99);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.register-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(28, 105, 212, 0.45);
+}
+
+.register-submit-btn:focus-visible,
+.register-back-btn:focus-visible {
+  outline: 2px solid #8cc8ff;
+  outline-offset: 4px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+  .customer-register-card {
+    padding: 32px 22px;
+  }
+
+  .customer-register-card h1 {
+    font-size: 26px;
+  }
+}

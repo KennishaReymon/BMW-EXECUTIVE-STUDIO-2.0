@@ -1,0 +1,132 @@
+/* =====================================
+   BMW CINEMATIC HOMEPAGE
+===================================== */
+
+.bmw-home {
+  min-height: 100vh;
+  background: #05080f;
+  color: white;
+}
+
+.bmw-home-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 80px 8%;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(28, 105, 212, 0.22),
+      transparent 65%
+    ),
+    #05080f;
+}
+
+.bmw-home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.bmw-home-eyebrow {
+  color: #8cc8ff;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.bmw-home-content h1 {
+  color: #ffffff;
+  font-size: clamp(36px, 6vw, 76px);
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.bmw-home-content h2 {
+  color: #8cc8ff;
+  font-size: clamp(20px, 3vw, 34px);
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+
+  text-shadow:
+    0 0 12px rgba(28, 105, 212, 0.7),
+    0 0 30px rgba(28, 105, 212, 0.4);
+}
+
+.bmw-home-description {
+  color: #d4e2f5;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 36px;
+}
+
+.bmw-explore-btn {
+  background: #1c69d4;
+  color: white;
+  border: 1px solid #4da6ff;
+  border-radius: 8px;
+  padding: 16px 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  box-shadow: 0 0 22px rgba(28, 105, 212, 0.35);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.bmw-explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(28, 105, 212, 0.7);
+}
+
+@media (max-width: 600px) {
+  .bmw-home-hero {
+    padding: 60px 20px;
+  }
+
+  .bmw-home-eyebrow {
+    letter-spacing: 2px;
+  }
+}
+
+/* CINEMATIC NIGHT DRIVE BACKGROUND */
+
+.bmw-home-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.bmw-home-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* DARK OVERLAY FOR TEXT READABILITY */
+
+.bmw-home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: -1;
+  pointer-events: none;
+}

@@ -1,0 +1,205 @@
+/* BMW EXECUTIVE STUDIO — CUSTOMER LOGIN */
+
+.customer-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(28, 105, 212, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #050a13, #0c1728);
+  color: #ffffff;
+}
+
+.customer-login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 45px 38px;
+  background: rgba(12, 22, 38, 0.92);
+  border: 1px solid rgba(77, 166, 255, 0.25);
+  border-radius: 18px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(28, 105, 212, 0.08);
+}
+
+.customer-login-eyebrow {
+  color: #8cc8ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.customer-login-card h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.customer-login-card > p:not(.customer-login-eyebrow):not(.customer-register-text) {
+  color: #a5b5cb;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.customer-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.customer-login-card label {
+  color: #dbe8fa;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.customer-login-card input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #0a1220;
+  color: #ffffff;
+  border: 1px solid #344760;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.customer-login-card input:focus {
+  border-color: #4da6ff;
+  box-shadow: 0 0 12px rgba(28, 105, 212, 0.2);
+}
+
+.customer-login-card input::placeholder {
+  color: #7f93ae;
+}
+
+.customer-login-card form button {
+  margin-top: 24px;
+  padding: 15px;
+  background: linear-gradient(135deg, #1c69d4, #104a99);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.customer-login-card form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(28, 105, 212, 0.45);
+}
+
+.customer-register-text {
+  margin-top: 28px;
+  color: #a5b5cb;
+  font-size: 13px;
+  text-align: center;
+}
+
+.customer-register-text button {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  color: #8cc8ff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.customer-register-text button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .customer-login-card {
+    padding: 32px 22px;
+  }
+
+  .customer-login-card h1 {
+    font-size: 27px;
+  }
+}
+
+/* PREMIUM BMW LOGIN HEADING */
+
+.customer-login-card h1 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+
+  text-shadow:
+    0 0 12px rgba(77, 166, 255, 0.25);
+}
+
+/* BMW CUSTOMER LOGIN — BACK TO HOMEPAGE */
+
+.customer-back-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: #8cc8ff;
+
+  border: 1px solid rgba(77, 166, 255, 0.35);
+  border-radius: 8px;
+
+  padding: 10px 16px;
+  margin-bottom: 28px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+
+  align-self: flex-start;
+margin-left: 0;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.customer-back-home:hover {
+  background: rgba(28, 105, 212, 0.12);
+  border-color: #8cc8ff;
+
+  box-shadow: 0 0 18px rgba(28, 105, 212, 0.25);
+
+  transform: translateX(-3px);
+}
+
+.customer-back-home:focus-visible {
+  outline: 2px solid #8cc8ff;
+  outline-offset: 4px;
+}
+
+/* KEEP BACK BUTTON LEFT ALIGNED */
+
+.customer-login-card > .customer-back-home {
+  display: flex;
+  width: fit-content;
+  margin-left: 0;
+  margin-right: auto;
+}
