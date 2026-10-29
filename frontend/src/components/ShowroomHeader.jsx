@@ -1,6 +1,7 @@
 export default function ShowroomHeader({
   onCollectionClick,
   onCustomerLoginClick,
+  onAdminLoginClick,
 }) {
   return (
     <header className="header">
@@ -33,10 +34,13 @@ export default function ShowroomHeader({
   CUSTOMER LOGIN
 </button>
 
-  <button type="button" className="nav-admin">
-    ADMIN LOGIN
-  </button>
-
+ <button
+  type="button"
+  className="nav-admin"
+  onClick={onAdminLoginClick}
+>
+  ADMIN LOGIN
+</button>
 </nav>
     </header>
   );

@@ -203,3 +203,27 @@ margin-left: 0;
   margin-left: 0;
   margin-right: auto;
 }
+
+
+/* FINAL CUSTOMER LOGIN TEXT VISIBILITY FIX */
+
+.customer-login-page .customer-login-card h1 {
+  color: #ffffff;
+  opacity: 1;
+  -webkit-text-fill-color: #ffffff;
+  text-shadow: 0 2px 16px rgba(77, 166, 255, 0.35);
+}
+
+.customer-login-page .customer-login-card > p {
+  color: #dce9f9;
+  opacity: 1;
+}
+
+.customer-login-page .customer-login-card
+.customer-login-eyebrow {
+  color: #8cc8ff;
+}
+
+.customer-login-page .customer-login-card label {
+  color: #f0f6ff;
+}

@@ -1,14 +1,19 @@
 import "./Home.css";
 import ShowroomHeader from "../components/ShowroomHeader";
 
-export default function Home({ onExplore, onCustomerLogin }) {
+export default function Home({
+  onExplore,
+  onCustomerLogin,
+  onAdminLogin,
+}) {
   return (
   <main className="bmw-home">
 
     {/* BMW LUXURY SHOWROOM HEADER */}
-   <ShowroomHeader
+  <ShowroomHeader
   onCollectionClick={onExplore}
   onCustomerLoginClick={onCustomerLogin}
+  onAdminLoginClick={onAdminLogin}
 />
   
    {/* CINEMATIC HOMEPAGE */}

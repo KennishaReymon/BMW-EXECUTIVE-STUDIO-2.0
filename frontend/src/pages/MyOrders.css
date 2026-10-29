@@ -1,0 +1,79 @@
+
+.my-orders-page {
+  min-height: 100vh;
+  padding: 60px 24px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 102, 204, 0.18), transparent 60%),
+    linear-gradient(135deg, #05080d, #101b2a, #05080d);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.my-orders-content {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.my-orders-content > button {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #3274b2;
+  border-radius: 6px;
+  color: #9ccfff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.my-orders-content > button:hover {
+  background: #1264b8;
+  color: #ffffff;
+}
+
+.my-orders-content > h1 {
+  margin: 50px 0 10px;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: 3px;
+}
+
+.my-orders-content > p {
+  color: #aab8c9;
+  margin-bottom: 35px;
+}
+
+.my-order-card {
+  margin-bottom: 22px;
+  padding: 30px;
+  border: 1px solid rgba(80, 150, 230, 0.3);
+  border-radius: 14px;
+  background: rgba(15, 25, 40, 0.94);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.my-order-card:hover {
+  transform: translateY(-3px);
+  border-color: #278be5;
+}
+
+.my-order-card h2 {
+  margin: 0 0 20px;
+  color: #70b9ff;
+  font-size: 26px;
+}
+
+.my-order-card p {
+  margin: 12px 0;
+  color: #d1d9e5;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .my-orders-page {
+    padding: 35px 16px;
+  }
+
+  .my-order-card {
+    padding: 22px;
+  }
+}

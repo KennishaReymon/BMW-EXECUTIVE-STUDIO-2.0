@@ -1,0 +1,110 @@
+
+.customer-dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(0, 102, 204, 0.18),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #05080d, #101b2a, #05080d);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.customer-dashboard-content {
+  width: 100%;
+  max-width: 720px;
+  padding: 65px 45px;
+  box-sizing: border-box;
+  text-align: center;
+  background: rgba(12, 20, 32, 0.92);
+  border: 1px solid rgba(80, 150, 230, 0.28);
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.customer-dashboard-content > p:first-child {
+  color: #60b0ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.customer-dashboard-content h1 {
+  margin: 25px 0 15px;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.customer-dashboard-content > p:nth-of-type(2) {
+  color: #aab7c9;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.customer-dashboard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 45px;
+}
+
+.customer-dashboard-actions button {
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid #2474bc;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.customer-dashboard-actions button:first-child {
+  background: linear-gradient(90deg, #0066b3, #168be2);
+  border-color: transparent;
+}
+
+.customer-dashboard-actions button:hover {
+  background: #168be2;
+  border-color: #168be2;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+}
+
+.customer-dashboard-actions button:last-child {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #aab7c9;
+}
+
+@media (max-width: 600px) {
+  .customer-dashboard-content {
+    padding: 45px 24px;
+  }
+}
+
+
+
+/* CUSTOMER DASHBOARD — WELCOME TEXT VISIBILITY */
+
+.customer-dashboard-page h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+  opacity: 1;
+  text-shadow: 0 2px 18px rgba(77, 166, 255, 0.45);
+}
+
+.customer-dashboard-page p {
+  color: #e0edff;
+  opacity: 1;
+}

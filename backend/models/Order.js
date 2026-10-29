@@ -29,6 +29,20 @@ const orderSchema = new mongoose.Schema(
       enum: ["Pending", "Confirmed", "Cancelled"],
       default: "Pending",
     },
+
+    
+paymentStatus: {
+  type: String,
+  enum: ["Unpaid", "Paid"],
+  default: "Unpaid",
+},
+
+salesStatus: {
+  type: String,
+  enum: ["Not Sold", "Sold"],
+  default: "Not Sold",
+},
+
   },
   { timestamps: true }
 );

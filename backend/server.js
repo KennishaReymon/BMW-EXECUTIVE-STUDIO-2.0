@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/authRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 require("dotenv").config();
 
@@ -19,6 +20,9 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/admin", adminRoutes);
+
+
 
 
 // BMW EXECUTIVE STUDIO API

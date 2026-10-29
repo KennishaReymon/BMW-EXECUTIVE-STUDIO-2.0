@@ -6,12 +6,17 @@ import Configurator from "./pages/Configurator";
 import Home from "./pages/Home";
 import CustomerLogin from "./pages/CustomerLogin";
 import CustomerRegister from "./pages/CustomerRegister";
+import CustomerDashboard from "./pages/CustomerDashboard";
+import MyOrders from "./pages/MyOrders";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
   const [selectedCar, setSelectedCar] = useState(null);
   const [currentPage, setCurrentPage] = useState("home");
+  const [loggedInUser, setLoggedInUser] = useState(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -59,9 +64,10 @@ function App() {
      {/* CINEMATIC HOMEPAGE */}
 {!showIntro && currentPage === "home" && (
   <Home
-    onExplore={() => setCurrentPage("collection")}
-    onCustomerLogin={() => setCurrentPage("customer-login")}
-  />
+  onExplore={() => setCurrentPage("collection")}
+  onCustomerLogin={() => setCurrentPage("customer-login")}
+  onAdminLogin={() => setCurrentPage("admin-login")}
+/>
 )}
 
 {/* CUSTOMER LOGIN PAGE */}
@@ -69,8 +75,77 @@ function App() {
   <CustomerLogin
     onBackHome={() => setCurrentPage("home")}
     onCreateAccount={() => setCurrentPage("customer-register")}
+   onLoginSuccess={(user) => {
+  setLoggedInUser(user);
+  setCurrentPage("customer-dashboard");
+}}
   />
 )}
+
+
+
+{/* ADMIN LOGIN PAGE */}
+{!showIntro && currentPage === "admin-login" && (
+  <AdminLogin
+    onBackHome={() => setCurrentPage("home")}
+    onLoginSuccess={(user) => {
+      console.log("Admin authenticated:", user.name);
+      setCurrentPage("admin-dashboard");
+    }}
+  />
+)}
+
+
+
+{/* ADMIN DASHBOARD */}
+{!showIntro && currentPage === "admin-dashboard" && (
+  <AdminDashboard
+    onLogout={() => {
+      sessionStorage.removeItem("bmwAdminToken");
+      setCurrentPage("home");
+    }}
+  />
+)}
+
+
+
+
+
+
+{/* CUSTOMER DASHBOARD */}
+{!showIntro && currentPage === "customer-dashboard" && (
+  <CustomerDashboard
+    user={loggedInUser}
+    onExplore={() => {
+      setSelectedCar(null);
+      setCurrentPage("collection");
+    }}
+   onMyOrders={() => {
+  setCurrentPage("my-orders");
+}}
+    onLogout={() => {
+      sessionStorage.removeItem("bmwToken");
+      setLoggedInUser(null);
+      setSelectedCar(null);
+      setCurrentPage("home");
+    }}
+  />
+)}
+
+
+
+{/* MY ORDERS PAGE */}
+{!showIntro && currentPage === "my-orders" && (
+  <MyOrders
+    onBack={() => setCurrentPage("customer-dashboard")}
+  />
+)}
+
+
+
+
+
+
 
 {/* CUSTOMER REGISTRATION PAGE */}
 {!showIntro && currentPage === "customer-register" && (

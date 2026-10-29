@@ -1,0 +1,119 @@
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top, #17345b 0%, transparent 55%),
+    linear-gradient(135deg, #050a12, #0d192b);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 42px;
+  background: rgba(14, 25, 42, 0.97);
+  border: 1px solid rgba(91, 165, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.5);
+}
+
+.admin-login-card > button {
+  background: transparent;
+  border: none;
+  color: #8cc6ff;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.admin-login-card > p:first-of-type {
+  color: #72b8ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.admin-login-card h1 {
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.admin-login-card > p:nth-of-type(2) {
+  color: #d3e2f3;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-login-card label {
+  color: #e4efff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.admin-login-card input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #192a40;
+  border: 1px solid #426181;
+  border-radius: 7px;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.admin-login-card input:focus {
+  outline: 2px solid #60b2ff;
+  border-color: transparent;
+}
+
+.admin-login-card form button {
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #0875d1, #0054a6);
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.admin-login-card form button:hover {
+  filter: brightness(1.2);
+}
+
+.admin-login-card form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-login-card [role="alert"] {
+  margin-top: 20px;
+  color: #ffb5b5;
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  .admin-login-card {
+    padding: 28px 22px;
+  }
+}

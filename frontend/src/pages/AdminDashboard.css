@@ -1,0 +1,103 @@
+
+.admin-dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #080c14, #101c2e);
+  color: #ffffff;
+  padding: 60px 24px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-dashboard-content > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 45px;
+}
+
+.admin-dashboard-content > header h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: 3px;
+  margin: 12px 0;
+}
+
+.admin-dashboard-content > header p {
+  color: #a9b9cf;
+  letter-spacing: 2px;
+}
+
+.admin-dashboard-content > header button {
+  background: transparent;
+  border: 1px solid #388ee8;
+  color: white;
+  padding: 13px 24px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.admin-dashboard-content > header button:hover {
+  background: #1769c2;
+}
+
+.admin-order-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(94, 158, 231, 0.22);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.admin-order-card h2 {
+  font-size: 26px;
+  color: #69b5ff;
+  margin-bottom: 20px;
+}
+
+.admin-order-card p {
+  color: #d3deed;
+  margin: 10px 0;
+}
+
+.admin-order-card label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.admin-order-card select {
+  width: 100%;
+  max-width: 260px;
+  background: #14243a;
+  color: white;
+  border: 1px solid #4b95e5;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.admin-order-card select:focus {
+  outline: 2px solid #69b5ff;
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard-content > header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-dashboard-page {
+    padding: 32px 16px;
+  }
+
+  .admin-order-card {
+    padding: 20px;
+  }
+}

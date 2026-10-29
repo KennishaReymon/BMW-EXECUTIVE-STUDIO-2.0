@@ -5,6 +5,7 @@ import "./CustomerLogin.css";
 export default function CustomerLogin({
   onBackHome,
   onCreateAccount,
+  onLoginSuccess,
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,11 +36,11 @@ export default function CustomerLogin({
       }
       sessionStorage.setItem("bmwToken", data.token);
 
-      setMessage(`Welcome back, ${data.user.name}!`);
+setMessage(`Welcome back, ${data.user.name}!`);
 
-      // Login succeeded. We'll connect the
-      // authenticated dashboard in a later step.
-      console.log("BMW customer login successful");
+if (onLoginSuccess) {
+  onLoginSuccess(data.user);
+}
     } catch (error) {
       setMessage(error.message || "Unable to log in");
     } finally {
